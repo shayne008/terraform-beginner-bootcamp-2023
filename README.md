@@ -194,6 +194,11 @@ Can ouput this plan to passed a apply.
 
 Should prompt for yes or no. Can automatically approve with auto approve flag. `terraform apply --auto-approve`
 
+### Terraform Destroy
+
+`terraform destroy`
+
+Will destory all resources
 ### Terraform Lock Files
 
 `.terraform.lock.hcl` contains the locked versionsing for the providers or modules that should be used with the project.
