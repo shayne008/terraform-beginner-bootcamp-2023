@@ -161,3 +161,57 @@ Will need to generate AWS CLI credentials for IAM User in order to use the AWS C
 These are the steps to create an IAM User in AWS:
 
 [Create an IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
+
+
+# Terraform Basics
+
+### Terraform Registry
+
+Terraform sources providers and modules from the Terraform registry which is located at [registry.terraform.io](https://registry.terraform.io/)
+
+- **Providers** Terraform providers are software components that enable Terraform, an Infrastructure as Code tool, to interact with and manage resources in various cloud, infrastructure, and service environments by abstracting the underlying APIs and allowing users to define, configure, and manage resources using a declarative language.
+- **Modules** Terraform modules are reusable, encapsulated units of Terraform configuration that allow you to organize and package infrastructure code in a modular and maintainable way. They are a fundamental concept in Terraform that promotes code reuse, modularity, and best practices in infrastructure as code (IaC) development.
+
+[Random Terraform Provider](https://registry.terraform.io/providers/hashicorp/random/latest)
+
+## Terraform Console
+
+Terraform console is a command-line tool in Terraform that allows you to interactively evaluate expressions and query data about your infrastructure. Just type in `terraform`
+
+### Terraform Init
+
+At the start of a project you will use `terraform init` to download essential files for the terraform providers.
+
+### Terraform Plan
+
+`terraform plan` is a command in Terraform that analyzes your infrastructure code and generates an execution plan. Provides you with valuable information about what Terraform intends to do when you apply your configuration.
+
+Can ouput this plan to passed a apply.
+
+### Terraform Apply
+
+`terraform apply` is a command in Terraform used to execute the changes specified in your Terraform configuration and apply them to your infrastructure. It is a critical step in the Terraform workflow and is used to create, update, or delete resources to achieve the desired state defined in your configuration.
+
+Should prompt for yes or no. Can automatically approve with auto approve flag. `terraform apply --auto-approve`
+
+### Terraform Lock Files
+
+`.terraform.lock.hcl` contains the locked versionsing for the providers or modules that should be used with the project.
+
+The Terraform Lock File ** should be committed** to the Version Control System (VSC) example GitHub
+
+### Terraform State Files
+
+`terraform.tfstate` contains information about the state of the infrastructure. 
+
+This file **should not be committed** to your VSC.
+
+The file contains senstive data, do not lose the file. Knows the state of infrastructure.
+
+### Terraform Directory
+
+`.terraform` is a directory on your file system that contains all the configuration files and associated resources for a specific Terraform project or deployment. This directory serves as the workspace for managing and defining your infrastructure as code (IaC). 
+
+
+
+
