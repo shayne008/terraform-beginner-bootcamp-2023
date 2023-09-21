@@ -196,9 +196,8 @@ Should prompt for yes or no. Can automatically approve with auto approve flag. `
 
 ### Terraform Destroy
 
-`terraform destroy`
+`terraform destroy` is a command in Terraform that is used to tear down and destroy the infrastructure resources that were created and managed by Terraform.
 
-Will destory all resources
 ### Terraform Lock Files
 
 `.terraform.lock.hcl` contains the locked versionsing for the providers or modules that should be used with the project.
