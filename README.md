@@ -194,6 +194,8 @@ Can ouput this plan to passed a apply.
 
 Should prompt for yes or no. Can automatically approve with auto approve flag. `terraform apply --auto-approve`
 
+**NOTE** Make sure you follow the bucket name rules, had to change the lower, upper and special characters around to make it work.
+
 ### Terraform Destroy
 
 `terraform destroy` is a command in Terraform that is used to tear down and destroy the infrastructure resources that were created and managed by Terraform.
