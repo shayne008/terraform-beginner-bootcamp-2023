@@ -223,6 +223,17 @@ The file contains senstive data, do not lose the file. Knows the state of infras
 
 `.terraform` is a directory on your file system that contains all the configuration files and associated resources for a specific Terraform project or deployment. This directory serves as the workspace for managing and defining your infrastructure as code (IaC). 
 
+## Issues with Terraform Cloud login and Gitpod Workspace
+
+When using `terraform init` will launch bash to view token. Had to hit the P (print)
+and Ctrl Click to open the link to create the token.
+
+### Migrate to Terraform Cloud
+
+Use the below document to help migrate to terraform cloud:
+
+[Migrate state to Terraform Cloud](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate)
+
 
 
 
