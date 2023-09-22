@@ -238,3 +238,12 @@ Use the below document to help migrate to terraform cloud:
 We automated the process with a bash script [bin/generate_credentials_tfrc](bin/generate_credentials_tfrc)
 
 
+#### Created an Alias for Terraform
+
+Use ChatGPT is created a bash script to automate creating an alias for terraform, stored in `.bash_profile`
+
+```bash
+alias tf='terraform'
+
+```
+
