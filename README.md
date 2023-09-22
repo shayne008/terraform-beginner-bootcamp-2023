@@ -235,5 +235,6 @@ Use the below document to help migrate to terraform cloud:
 [Migrate state to Terraform Cloud](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate)
 
 
+We automated the process with a bash script [bin/generate_credentials_tfrc](bin/generate_credentials_tfrc)
 
 
