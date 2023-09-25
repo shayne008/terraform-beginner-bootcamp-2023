@@ -1,12 +1,5 @@
 # Terraform Beginner Bootcamp 2023
 
-## Table of Contents
-
-- [Install Terraform CLI](#installing-terraform-cli)
-- [Considerations for Linux Distribution](#considerations-for-linux-distribution)
-
-
-
 ## Installing Terraform CLI
 
 
