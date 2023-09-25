@@ -7,7 +7,7 @@
     + [Shebang Considerations](#shebang-considerations)
     + [Execution Considerations](#execution-considerations)
       - [Permission Considerations](#permission-considerations)
-  * [Gitpod Lifecycle - Before, Init, Command](#gitpod-lifecycle---before--init--command)
+    + [Gitpod Lifecycle](#gitpod-lifecycle)
   * [Working with Env Vars](#working-with-env-vars)
     + [env command](#env-command)
     + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
@@ -29,7 +29,7 @@
     + [Migrate to Terraform Cloud](#migrate-to-terraform-cloud)
       - [Created an Alias for Terraform](#created-an-alias-for-terraform)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -109,7 +109,7 @@ Needed to change the permissions to make the file executable at user level.
 ```sh
 chmod u+x ./bin/install_terraform_cli
 ```
-### Gitpod Lifecycle (Before, Init, Command)
+### Gitpod Lifecycle 
 
 We changed for init to before so we can run the bash script with no issues. Use caution when using init because it will not rerun when using an existing workspace.
 
