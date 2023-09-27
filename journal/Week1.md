@@ -65,3 +65,26 @@ This is the the default file to load in terraform variables in blank
 - Environment Variables
 - Default Values in Configuration Files
 - Providers and Modules
+
+
+## Dealing With Configuration Drift 
+
+## What happens if you lose the state file?
+
+If you lose the statefile, you will more than likely have to tear down all the cloud infrastructure manually.
+
+You can use terraform import but it will not work for all cloud resources. Please check the terraform providers documentation.
+### Fix Missing Resources with Terraform Import
+
+
+`terraform import aws_s3_bucket.bucket bucket-name`
+
+[Terraform Input](https://developer.hashicorp.com/terraform/language/import)
+[aws_s3_bucket import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import)
+
+
+### Fix Manual Configuration
+
+If someone deletes or modifies cloud resources manually through ClickOps.
+
+If we run Terraform Plan with the attempt to put our infrastructure back into the expected state fixing Configuration Drift
