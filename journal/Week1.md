@@ -88,3 +88,43 @@ You can use terraform import but it will not work for all cloud resources. Pleas
 If someone deletes or modifies cloud resources manually through ClickOps.
 
 If we run Terraform Plan with the attempt to put our infrastructure back into the expected state fixing Configuration Drift
+
+## Fix using Terraform Refresh
+
+```sh
+terraform apply -refresh-only -auto-approve
+```
+
+## Terraform Modules
+
+### Terraform Module Structure
+It is recommend to place modules in a `modules` directory when locally
+developing modules but you can name it whatever you like.
+
+### Passing Input Variables
+
+You can pass input variables to the module.
+The module has to declare the terraform variables in its own variables.tf
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+### Modules Sources
+
+Using the source you can import the module from various places eg:
+- locally
+- GitHub
+- Terraform Registry
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+}
+```
+
+[Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
