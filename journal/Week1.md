@@ -128,3 +128,46 @@ module "terrahouse_aws" {
 ```
 
 [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+
+## Considerations when using ChatGPT to write Terraform
+
+LLMs such as ChatGPT may not be trained on the latest documentation or information about Terraform.
+
+It may likely produce older examples that could be depreciated, often affecting the providers.
+
+## Working with Files in Terraform
+
+## Fileexists Function
+
+This is a builtin terraform function to check the file existance.
+
+```tf
+    condition     = fileexists(var.error_html_filepath)
+```
+[fileexists Function](https://developer.hashicorp.com/terraform/language/functions/fileexists)
+
+## Filemd5
+
+
+
+[filemd5 Function](https://developer.hashicorp.com/terraform/language/functions/filemd5)
+
+### Path Variable
+
+In Terraform, a "path variable" typically refers to a variable that represents a file or directory path.
+- path.module = the filesystem path of the module where the expression is placed
+- path.root = the filesystem path of the root module of the configuration.
+
+
+[Filesystem and Workspace Info](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
+
+resource "aws_s3_object" "index_html" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "index.html"
+  source = "${path.root}/public/index.html"
+
+  # The filemd5() function is available in Terraform 0.11.12 and later
+  # For Terraform 0.11.11 and earlier, use the md5() function and the file() function:
+  # etag = "${md5(file("path/to/file"))}"
+  etag = filemd5(var.index_html_filepath)
+}
