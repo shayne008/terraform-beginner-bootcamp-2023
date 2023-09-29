@@ -171,3 +171,36 @@ resource "aws_s3_object" "index_html" {
   # etag = "${md5(file("path/to/file"))}"
   etag = filemd5(var.index_html_filepath)
 }
+
+## Terraform Locals
+ 
+In Terraform, locals are a way to define reusable values or expressions within your configuration.
+
+ This is useful when you want to reference cloud resources but not import them.
+
+ ```tf
+ locals {
+  service_name = "forum"
+  owner        = "Community Team"
+}
+
+ ```
+
+ [Terraform Locals](https://developer.hashicorp.com/terraform/language/values/locals)
+### Terraform Data Sources
+
+Data sources allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.
+
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+
+### Working with JSON
+
+Used the jsonencode to create the json policy inline in the hcl.
+
+```tf
+> jsonencode({"hello"="world"})
+{"hello":"world"}
+
+```
+
+[jsonencode Function](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
