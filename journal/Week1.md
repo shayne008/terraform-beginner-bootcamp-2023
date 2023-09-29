@@ -204,3 +204,13 @@ Used the jsonencode to create the json policy inline in the hcl.
 ```
 
 [jsonencode Function](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
+
+
+### Changing the Lifecycle of Resources
+
+[Lifecycle Resources](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
+
+### Terraform Data
+
+
+[Terraform Data](https://developer.hashicorp.com/terraform/language/resources)
