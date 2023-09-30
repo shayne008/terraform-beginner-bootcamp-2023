@@ -282,10 +282,6 @@ fileset enumerates a set of regular file names given a path and pattern.
 
 For each allows us to enumerate our data types.
 
-
-
-
-
 ```tf
 resource "aws_iam_user" "the-accounts" {
   for_each = toset( ["Todd", "James", "Alice", "Dottie"] )
