@@ -19,3 +19,9 @@ variable "content_version" {
   description = "The content version, a positive integer starting at 1."
   type        = number
 }
+
+
+variable "assets_path" {
+  description = "Path to assets folder"
+  type        = string
+}
