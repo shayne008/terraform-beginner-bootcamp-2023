@@ -263,3 +263,35 @@ resource "aws_instance" "web" {
   }
 }
 ```
+
+### Http-server
+
+http-server is a simple, zero-configuration command-line static HTTP server.
+
+[http-server](https://www.npmjs.com/package/http-server)
+
+## Functions
+
+### fileset
+
+fileset enumerates a set of regular file names given a path and pattern.
+
+[fileset Function](https://developer.hashicorp.com/terraform/language/functions/fileset)
+
+### For Each Expressions
+
+For each allows us to enumerate our data types.
+
+
+
+
+
+```tf
+resource "aws_iam_user" "the-accounts" {
+  for_each = toset( ["Todd", "James", "Alice", "Dottie"] )
+  name     = each.key
+}
+```
+
+[For Each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
+
