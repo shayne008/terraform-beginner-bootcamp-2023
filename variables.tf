@@ -20,8 +20,18 @@ variable "content_version" {
   type        = number
 }
 
-
+variable "teacherseat_user_uuid" {
+  type        = string
+}
 variable "assets_path" {
   description = "Path to assets folder"
+  type        = string
+}
+
+variable "terratowns_access_token" {
+  type        = string
+}
+
+variable "terratowns_endpoint" {
   type        = string
 }
